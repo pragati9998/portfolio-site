@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragati's Portfolio</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer src="email.js"></script> <!-- Link to external JS -->
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Pragati.</a>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="title">Hi, I'm <span class="highlight">Pragati Chaudhary</span></h1>
+                <p class="subtitle">Aspiring Data Engineer</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary">Contact Me</a>
+                    <a href="Resume/Pragati_Chaudhary_Data_Engineer_Intern_Resume.pdf" class="btn secondary">Download
+                        CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="image/image.jpg" alt="pragati">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I am passionate about Data Engineering and DevOps, focusing on building scalable data pipelines,
+                    real-time processing
+                    systems, and automating workflows. I enjoy working with tools like Apache Kafka, Spark, Docker, and
+                    Jenkins, and have
+                    experience managing cloud infrastructure with AWS. My goal is to streamline workflows and create
+                    reliable, efficient
+                    systems.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>DevOps Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Data Engineering</span>
+                        <span class="tag">Terraform</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Apache kafka</span>
+                        <span class="tag">Apache Spark</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Cloud Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Microsoft Azure</span>
+                    </div>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Team Leadership</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Agile</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project cards will be dynamically generated via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
