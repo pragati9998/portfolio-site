@@ -3,7 +3,7 @@ const projects = [
     {
         title: "Real-Time Weather Insights: Interactive Data Dashboard",
         description: "A full-featured e-commerce platform built with React and Node.js",
-        image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8",
+        image: "https://www.google.com/imgres?q=Real-Time%20Weather%20Insights%3A%20Interactive%20Data%20Dashboard&imgurl=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1400%2F1*8MlkRf5Wt4PyyJW0j-8grQ.png&imgrefurl=https%3A%2F%2Fmedium.com%2F%40yosami14%2Fcreating-a-weather-dashboard-using-html-css-and-javascript-217f80229fb&docid=HTJA1Mzi3SZNIM&tbnid=VpNSXDqFwYL-yM&vet=12ahUKEwje9JiczciLAxVqdPUHHTYADuoQM3oECGUQAA..i&w=1400&h=735&hcb=2&ved=2ahUKEwje9JiczciLAxVqdPUHHTYADuoQM3oECGUQAA",
         github: "https://github.com/pragati9998/Real-Time-Weather-Analytics-Dashboard",
         demo: "#"
     },

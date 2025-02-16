@@ -7,15 +7,13 @@
     <title>Pragati's Portfolio</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script defer src="email.js"></script> <!-- Link to external JS -->
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Pragati.</a>
+            <a href="#home" class="logo">Pragati.</a>
             <button class="nav-toggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -136,7 +134,8 @@
         <div class="container">
             <h2 class="section-title">Contact Me</h2>
             <div class="contact-form">
-                <form id="contactForm">
+                <!-- Updated Form -->
+                <form action="https://formspree.io/f/xldgpqln" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
