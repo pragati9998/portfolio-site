@@ -3,7 +3,7 @@ const projects = [
     {
         title: "Real-Time Weather Insights: Interactive Data Dashboard",
         description: "A full-featured e-commerce platform built with React and Node.js",
-        image: "https://www.google.com/imgres?q=Real-Time%20Weather%20Insights%3A%20Interactive%20Data%20Dashboard&imgurl=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1400%2F1*8MlkRf5Wt4PyyJW0j-8grQ.png&imgrefurl=https%3A%2F%2Fmedium.com%2F%40yosami14%2Fcreating-a-weather-dashboard-using-html-css-and-javascript-217f80229fb&docid=HTJA1Mzi3SZNIM&tbnid=VpNSXDqFwYL-yM&vet=12ahUKEwje9JiczciLAxVqdPUHHTYADuoQM3oECGUQAA..i&w=1400&h=735&hcb=2&ved=2ahUKEwje9JiczciLAxVqdPUHHTYADuoQM3oECGUQAA",
+        image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8",
         github: "https://github.com/pragati9998/Real-Time-Weather-Analytics-Dashboard",
         demo: "#"
     },
@@ -15,6 +15,7 @@ const projects = [
         github: "https://github.com/pragati9998/My_scraping_project",
         demo: "#"
     }
+    
 ];
 
 // Theme Toggle
@@ -77,36 +78,17 @@ function renderProjects() {
     projectsGrid.innerHTML = projects.map(createProjectCard).join('');
 }
 
-// Form Validation and Handling
-const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
 
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
 
-    // Basic validation
-    if (data.name.length < 2) {
-        alert('Name must be at least 2 characters long');
-        return;
-    }
 
-    if (!data.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        alert('Please enter a valid email address');
-        return;
-    }
 
-    if (data.message.length < 10) {
-        alert('Message must be at least 10 characters long');
-        return;
-    }
 
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', data);
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
-});
+
+
+
+
+
 
 // Mobile Navigation Menu
 const navToggle = document.querySelector('.nav-toggle');
