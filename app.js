@@ -1,45 +1,18 @@
 // Projects Data
 const projects = [
     {
-        title: "E-commerce Platform",
+        title: "Real-Time Weather Insights: Interactive Data Dashboard",
         description: "A full-featured e-commerce platform built with React and Node.js",
         image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8",
-        github: "#",
+        github: "https://github.com/pragati9998/Real-Time-Weather-Analytics-Dashboard",
         demo: "#"
     },
+
     {
-        title: "Task Management App",
-        description: "A collaborative task management application with real-time updates",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-        github: "#",
-        demo: "#"
-    },
-    {
-        title: "Weather Dashboard",
-        description: "A weather forecasting application with interactive maps",
-        image: "https://images.unsplash.com/photo-1739514984003-330f7c1d2007",
-        github: "#",
-        demo: "#"
-    },
-    {
-        title: "Social Media Analytics",
-        description: "Analytics dashboard for social media performance tracking",
-        image: "https://images.unsplash.com/photo-1510759395231-72b17d622279",
-        github: "#",
-        demo: "#"
-    },
-    {
-        title: "Fitness Tracker",
-        description: "A fitness tracking app with workout planning features",
-        image: "https://images.unsplash.com/photo-1660592868727-858d28c3ba52",
-        github: "#",
-        demo: "#"
-    },
-    {
-        title: "Recipe Finder",
-        description: "Recipe search and meal planning application",
+        title: "Python-Powered Book Data Scraper",
+        description: "This project is a simple web scraping application that extracts book titles and prices from Books to Scrape.",
         image: "https://images.unsplash.com/photo-1685478237595-f452cb125f27",
-        github: "#",
+        github: "https://github.com/pragati9998/My_scraping_project",
         demo: "#"
     }
 ];
