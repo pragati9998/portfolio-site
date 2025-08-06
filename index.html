@@ -2072,48 +2072,66 @@
         });
 
         // Enhanced form submission with animations
-        // const contactForm = document.querySelector('form');
-        // contactForm.addEventListener('submit', function (e) {
-        //   e.preventDefault();
+        const contactForm = document.querySelector('form');
 
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-        // Show loading state with animation
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        submitBtn.disabled = true;
-        submitBtn.style.transform = 'scale(0.95)';
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
 
-        // Simulate form submission
-        setTimeout(() => {
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            submitBtn.style.background = 'var(--gradient-3)';
-            submitBtn.style.transform = 'scale(1.05)';
+            // Show loading spinner
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            submitBtn.style.transform = 'scale(0.95)';
 
-            // Add success effect
-            submitBtn.style.boxShadow = '0 0 30px rgba(5, 150, 105, 0.5)';
+            const formData = new FormData(contactForm);
 
-            // Reset form with animation
-            const inputs = this.querySelectorAll('input, textarea');
-            inputs.forEach(input => {
-                setTimeout(() => {
-                    input.style.transform = 'translateX(-10px)';
-                    setTimeout(() => {
-                        input.value = '';
-                        input.style.transform = 'translateX(0)';
-                    }, 150);
-                }, Math.random() * 300);
-            });
+            fetch('https://formspree.io/f/xldgpqln', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Animation + success styling
+                        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                        submitBtn.style.background = 'var(--gradient-3)';
+                        submitBtn.style.transform = 'scale(1.05)';
+                        submitBtn.style.boxShadow = '0 0 30px rgba(5, 150, 105, 0.5)';
 
-            // Reset button after 4 seconds
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = 'var(--gradient-1)';
-                submitBtn.style.transform = 'scale(1)';
-                submitBtn.style.boxShadow = 'var(--shadow)';
-            }, 4000);
-        }, 2500);
+                        // Reset form inputs with animation
+                        const inputs = contactForm.querySelectorAll('input, textarea');
+                        inputs.forEach(input => {
+                            setTimeout(() => {
+                                input.style.transform = 'translateX(-10px)';
+                                setTimeout(() => {
+                                    input.value = '';
+                                    input.style.transform = 'translateX(0)';
+                                }, 150);
+                            }, Math.random() * 300);
+                        });
+
+                        // Reset button after 4 seconds
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.background = 'var(--gradient-1)';
+                            submitBtn.style.transform = 'scale(1)';
+                            submitBtn.style.boxShadow = 'var(--shadow)';
+                        }, 4000);
+                    } else {
+                        // Error state
+                        submitBtn.innerHTML = '<i class="fas fa-times"></i> Error!';
+                        submitBtn.style.background = 'red';
+                        console.error('Form submission error.');
+                    }
+                })
+                .catch(error => {
+                    submitBtn.innerHTML = '<i class="fas fa-times"></i> Failed!';
+                    submitBtn.style.background = 'red';
+                    console.error('Network error:', error);
+                });
         });
 
         // Add magical hover effects to buttons
